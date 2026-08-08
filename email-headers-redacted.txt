@@ -1,0 +1,40 @@
+Delivered-To: [recipient-email-redacted]@gmail.com
+Received: by 2002:adf:f283:0:b0:47f:f3ab:a86 with SMTP id k3csp2084223wro; Fri, 7 Aug 2026 11:24:30 -0700 (PDT)
+X-Received: by 2002:a05:620a:199d:b0:92e:d0de:adb8 with SMTP id af79cd13be357-9367b59faa7mr73846085a.5.1786127070140; Fri, 07 Aug 2026 11:24:30 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1786127070; cv=none; d=google.com; s=arc-20260327; b=fqpvzpg4hsPWsUNOdwhNMVW82/BPIRzHfEYnIgT90KS90yq6Y8sCk2LdfHh8651f6e O72pxCjtIDX1yE6/p5T9yPiCoQZqTgkbOZgC5IeohxDasC81uNc+syNrj05GFrzlDUat FvOHPzH3v52X93AgO7zhaUjHF266JNOqeKwjuzvt/k0r9lk5c+g8akVkSMsU8zRo19zX OxMzNucxHzfoF0aDQ7QXwg3cP81iBRwcKI5TRQbbz02CHLhTVG6o4kqeM6i2uNdZNzXU vn82J0nBJS+aCLsz4QV0Chmaq7qWTAZxr0NvDoCui9yHtUiG+JvPAlUmt2mSVB0vgcbX 5pQw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327; h=feedback-id:list-unsubscribe-post:list-unsubscribe:message-id :subject:date:to:from:mime-version:dkim-signature:dkim-signature; bh=ua3mLn1y7GzlR876hF5MDio4O+ShM4RYHD+OLrJ9jiw=; fh=1jpxqC7Utypg+Siitqu8YGwNpsIhC3kQe3SSaz0ZIlQ=; b=fPZ/jADFi9M/hZKHWmZxenAvL7dK3yOzKHsPqAgo2Y9qkiPnFZEiN3uUy6p6oVkTEI LW8oMleWgi5a/ucDAx7tY9J/z5mTUrjbd0rA0bbMZ22+1T+SWym7ZjWLSbRh1jmiTv6p 0TfqXmScT30iXMtEHCYHe4y1gp4XRIXGeWYH5h9eedgc7d+f7FDMowvRQi/INmivni4V IG/JysIG0ACCJMrShLbicwW2tdfeGIJsqIGNFbVChaArEUaJLCzrokQcoeu4BKjhaxeq OIv6jetGomV2x3UPaG/TLp9X8XaqbWNAqAONP+3wpXRbCLZN+G2+2FV1oLunDa8wScuP sVtA==; dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; dkim=pass header.i=@accessbankplc.com header.s=nc2048 header.b=f4djWu+O; dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=UZRcg3pt; spf=pass (google.com: domain of 17860518324688218-74879-1-gmail.com@delivery.accessbankplc.com designates 202.162.253.144 as permitted sender) smtp.mailfrom=17860518324688218-74879-1-gmail.com@delivery.accessbankplc.com; dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=accessbankplc.com
+Return-Path: <17860518324688218-74879-1-gmail.com@delivery.accessbankplc.com>
+Received: from mta-253.144.ncdelivery08.com (mta-253.144.ncdelivery08.com. [202.162.253.144]) by mx.google.com with ESMTPS id af79cd13be357-9366e407e7esi241581685a.480.2026.08.07.11.24.29 for <[recipient-email-redacted]@gmail.com> (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256); Fri, 07 Aug 2026 11:24:30 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 17860518324688218-74879-1-gmail.com@delivery.accessbankplc.com designates 202.162.253.144 as permitted sender) client-ip=202.162.253.144;
+Authentication-Results: mx.google.com; dkim=pass header.i=@accessbankplc.com header.s=nc2048 header.b=f4djWu+O; dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=UZRcg3pt; spf=pass (google.com: domain of 17860518324688218-74879-1-gmail.com@delivery.accessbankplc.com designates 202.162.253.144 as permitted sender) smtp.mailfrom=17860518324688218-74879-1-gmail.com@delivery.accessbankplc.com; dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=accessbankplc.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=accessbankplc.com; s=nc2048; h=feedback-id:list-unsubscribe-post:list-unsubscribe:message-id:content-type: subject:to:from:mime-version:from:to:subject; bh=ua3mLn1y7GzlR876hF5MDio4O+ShM4RYHD+OLrJ9jiw=; b=f4djWu+OLtsmdX3brN/6bZXC/dVa9TgRvyCf3QVF4aqK+m9jeyBLAI8/DDgx+HfnerfRGrg0qlvan tbHs7o6t4TO1JMa+NetYIvuvOcdhgWKkiRaVUrlMDd41OoTsQ8IT2nbLuA3sSp1tzWwyiP2XV8zvs7 bLpSFLgp9lcrrzs/47UqpGorJK78AqOn4D/In1STevTD2dYyI5gCDy0J/No/L2yx4euuYum6DGWPe6 LW06h4aG0aR+EXe1xYsV+rNkUTuG8D3wRR1B7VNcihlLDxEUh4Xm39ATu8djiIQ40ft6AHesVoo5JD 59lCvba3vIIbDDiF0NN+ZyGi5/l4jyQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=env.etransmail.com; s=fnc; h=feedback-id:list-unsubscribe-post:list-unsubscribe:message-id:content-type: subject:to:from:mime-version:from:to:subject; bh=ua3mLn1y7GzlR876hF5MDio4O+ShM4RYHD+OLrJ9jiw=; b=UZRcg3ptHGxNfmmypS6qZshWz1R+ny+JGtsaqH9EMkeT/g5h0tp6VXZ099idvpgjGQuv0V4aECdGn DfoS7h3pUaQsoNjQxexO2W7ltUPJbpplJtoxNYiXX5r/pOdFpDbJybuWwKKWfoRYPky3DhwSXJeUQ6 /kUf4RSBoW9vqjB0=
+MIME-Version: 1.0
+From: "Access Bank" <noreply@accessbankplc.com>
+To: [recipient-email-redacted]@gmail.com
+Date: Fri, 07 Aug 2026 23:54:29 +0530
+Subject: July 2026 Account Statement
+Content-Type: multipart/mixed; boundary=--boundary_3088_7789a282-d30b-40d9-b571-9264b45ec8e5
+Message-Id: <20260807182424.250A714B7D2@gcpsmtpeu3.pepipost.com>
+X-InjTime: 1786127064
+List-Unsubscribe: <https://delivery.accessbankplc.com/NMRTIX?id=74879=NB0DVVIBDlYNSkNCRRgSEkIVEkFEEERDQRUZRREXFBFBQRNFRRUWQRQWQ0JFGBISQgVOAAZUEQ8MQE0RUFtdUw4PWggMRl8hU1sCCwkWUV0PSQNWXAZUVlANClcFAQwJU1ALGQ1BQhFHDExNAV1eWxRQQBhKUQcABEZKB1BZX0ENAh0GClgZL3lkNys9B1tWHkMB>, <mailto:17860518324688218-74879-fncunsub@usub.ftrans03.com?subject=Unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: NzQ4Nzk6MjAyNjA4MDdfMjM6:pepipostE
+X-FNCID: 74879-17860518324688218-0
+X-Traffic-Type: 74879-2
+X-Mailer: NetcoreCloud Mailer
+
+Dear Mr. [FULL NAME REDACTED],
+Your statement of account for July 2026 is now available (see attached).
+Please be informed that the password required to access your account statement is your default (first) account number.
+Kindly review your statement carefully and please feel free to reach out to us within 30 days if there are any discrepancies.
+For further enquiries feedback, call us on 0201-2712005-7, 07003000000 or send an email to contactcenter@accessbankplc.com
+Thank you for choosing Access Bank
+
+Important Security Reminder.
+Do not share your card number, CVV, One Time Password (OTP), PIN, or password with anyone, not even an Access Bank staff.
+Keep your phone safe and always lock your SIM card to prevent unauthorized access to your account in the event of loss or theft.
+
+[Attachment: Consolidated_Jul2026_Statement.pdf — application/pdf, base64-encoded, content omitted]
+
